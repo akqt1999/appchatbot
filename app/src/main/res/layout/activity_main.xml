@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main"
+    android:background="#DFC6DC"
+    >
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:scrollbars="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:reverseLayout="true"
+        app:stackFromEnd="true"
+
+        />
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <ImageButton
+            android:id="@+id/btn_send"
+            android:layout_width="89dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="btnSend"
+            android:src="@drawable/ic_baseline_send_24" />
+
+
+
+        <EditText
+
+            android:maxLines="6"
+            android:inputType="textCapSentences|textMultiLine"
+            android:singleLine="false"
+            android:scrollHorizontally="false"
+            android:id="@+id/edt_message"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="10dp"
+            android:layout_weight="2"
+            android:background="@null"
+            android:hint="ban can giup gi"
+            android:paddingLeft="10dp" />
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
